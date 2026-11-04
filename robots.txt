@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mohamed-ali-sablaoui.github.io/sitemap.xml
