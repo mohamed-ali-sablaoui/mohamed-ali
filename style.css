@@ -1,12 +1,12 @@
 /* Mohamed Ali Sablaoui — Portfolio */
 :root {
-  --bg: #050807;
-  --bg-soft: #080d0b;
-  --panel: rgba(14, 21, 18, .82);
-  --panel-strong: #0c1410;
+  --bg: #101b17;
+  --bg-soft: #1a2e26;
+  --panel: rgba(21, 38, 30, 0.82);
+  --panel-strong: #14241c;
   --line: rgba(0, 230, 154, .22);
-  --line-soft: rgba(255,255,255,.10);
-  --green: #00e69a;
+  --line-soft: rgba(57, 54, 54, 0.1);
+  --green: #00e699;
   --green-2: #00bf7e;
   --text: #f4f7f5;
   --muted: #a3aca7;
