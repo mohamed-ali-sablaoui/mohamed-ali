@@ -528,3 +528,9 @@ button { font:inherit; }
         transition: none !important;
     }
 }
+/* TEMPORARY TEST */
+.studynet-card.reveal {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+}
