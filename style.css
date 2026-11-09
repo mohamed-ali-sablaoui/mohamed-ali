@@ -153,3 +153,244 @@ button { font:inherit; }
 @media (prefers-reduced-motion:reduce) {
   *,*::before,*::after { scroll-behavior:auto!important; animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; }.intro-screen { display:none; }.reveal { opacity:1; transform:none; }
 }
+/* =========================================
+   STUDY NET — PORTFOLIO PROJECT CARD
+========================================= */
+
+.studynet-card {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--text);
+    background: linear-gradient(
+        145deg,
+        rgba(21, 38, 30, .96),
+        rgba(8, 17, 12, .96)
+    );
+    border: 1px solid rgba(0, 230, 154, .22);
+    border-radius: 18px;
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+.studynet-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: .35;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 230, 154, .09),
+            transparent 45%
+        );
+}
+
+.studynet-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--green);
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, .35),
+        0 0 22px rgba(0, 230, 154, .10);
+}
+
+/* IMAGE */
+
+.studynet-card .project-image {
+    height: 225px;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(0, 230, 154, .17),
+            transparent 65%
+        ),
+        #07100b;
+    border-bottom: 1px solid rgba(0, 230, 154, .18);
+}
+
+.studynet-card .project-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+        180deg,
+        transparent 55%,
+        rgba(3, 9, 6, .65)
+    );
+}
+
+.studynet-card .project-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .55s ease;
+}
+
+.studynet-card:hover .project-image img {
+    transform: scale(1.06);
+}
+
+/* CATEGORY */
+
+.studynet-card .project-category {
+    position: absolute;
+    z-index: 2;
+    top: 15px;
+    left: 15px;
+    padding: 7px 13px;
+    border: 1px solid rgba(0, 230, 154, .35);
+    border-radius: 30px;
+    color: var(--green);
+    background: rgba(3, 12, 7, .88);
+    backdrop-filter: blur(10px);
+    font: 600 10px var(--font-display);
+    letter-spacing: .07em;
+    text-transform: uppercase;
+}
+
+/* CONTENT */
+
+.studynet-card .project-content {
+    position: relative;
+    z-index: 2;
+    padding: 23px;
+}
+
+.studynet-card .project-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.studynet-card .project-top h3 {
+    margin: 0;
+    color: var(--text);
+    font: 800 23px var(--font-heading);
+    letter-spacing: -.04em;
+    transition: color .25s;
+}
+
+.studynet-card:hover .project-top h3 {
+    color: var(--green);
+}
+
+/* ARROW */
+
+.studynet-card .project-arrow {
+    width: 39px;
+    height: 39px;
+    flex: 0 0 39px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(0, 230, 154, .25);
+    border-radius: 50%;
+    color: var(--green);
+    background: rgba(0, 230, 154, .07);
+    font-size: 20px;
+    transition: .3s ease;
+}
+
+.studynet-card:hover .project-arrow {
+    color: #03110b;
+    background: var(--green);
+    border-color: var(--green);
+    transform: rotate(45deg);
+}
+
+/* DESCRIPTION */
+
+.studynet-card .project-content p {
+    margin: 0 0 21px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.85;
+}
+
+/* TECHNOLOGIES */
+
+.studynet-card .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+.studynet-card .project-tags span {
+    padding: 6px 11px;
+    border: 1px solid rgba(0, 230, 154, .15);
+    border-radius: 6px;
+    color: #b9d8c9;
+    background: rgba(0, 230, 154, .06);
+    font: 10px var(--font-display);
+    transition: .25s;
+}
+
+.studynet-card .project-tags span:hover {
+    color: var(--green);
+    border-color: rgba(0, 230, 154, .45);
+    background: rgba(0, 230, 154, .12);
+}
+
+/* FOOTER */
+
+.studynet-card .project-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, .08);
+    color: var(--green);
+    font: 600 11px var(--font-display);
+    letter-spacing: .04em;
+}
+
+.studynet-card .project-footer span:last-child {
+    font-size: 20px;
+    transition: transform .25s ease;
+}
+
+.studynet-card:hover .project-footer span:last-child {
+    transform: translateX(6px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 650px) {
+    .studynet-card {
+        border-radius: 15px;
+    }
+
+    .studynet-card .project-image {
+        height: 185px;
+    }
+
+    .studynet-card .project-content {
+        padding: 18px;
+    }
+
+    .studynet-card .project-top h3 {
+        font-size: 21px;
+    }
+
+    .studynet-card .project-content p {
+        font-size: 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .studynet-card,
+    .studynet-card * {
+        transition: none !important;
+    }
+}
