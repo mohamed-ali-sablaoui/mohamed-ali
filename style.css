@@ -394,3 +394,43 @@ button { font:inherit; }
         transition: none !important;
     }
 }
+/* IMAGE — STUDY NET */
+
+.studynet-card .project-image {
+    height: 190px;
+    padding: 18px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(0, 230, 154, .13),
+            transparent 70%
+        ),
+        #08120c;
+    border-bottom: 1px solid rgba(0, 230, 154, .18);
+}
+
+.studynet-card .project-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 9px;
+    transition: transform .4s ease;
+}
+
+.studynet-card:hover .project-image img {
+    transform: scale(1.03);
+}
+
+@media (max-width: 650px) {
+    .studynet-card .project-image {
+        height: 155px;
+        padding: 12px;
+    }
+}
