@@ -479,11 +479,7 @@ button {
    SOCIAL LINKS
 ========================================= */
 
-.social-links {
-  display: flex;
-  gap: 13px;
-  margin-top: 20px;
-}
+
 
 .social-links a {
   width: 45px;
